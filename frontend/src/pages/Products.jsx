@@ -56,6 +56,8 @@ function Products() {
 
     setCart([...cart]);
     localStorage.setItem('cart', JSON.stringify(cart));
+    // Notify other tabs and force Header to update
+    window.dispatchEvent(new Event('storage'));
   };
 
   const isAdmin = JSON.parse(localStorage.getItem('user'))?.role === 'ADMIN';
@@ -151,7 +153,7 @@ function Products() {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2025 EcommerceDemoApp. All rights reserved.</p>
+        <p>&copy; 2025 ZIVDAH ONLINE GROCERY PRIVATE LIMITED 2025. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -51,7 +51,7 @@ function Header({ searchQuery, setSearchQuery }) {
 
   return (
     <header className="header">
-      <h1 className="app-title" onClick={() => navigate('/')}>EcommerceDemo</h1>
+      <h1 className="app-title" onClick={() => navigate('/')}>ZIVDAH ONLINE GROCERY</h1>
       <div className="header-right">
         <input
           type="text"
