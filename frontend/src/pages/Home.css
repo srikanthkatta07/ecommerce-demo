@@ -1,4 +1,5 @@
 .home-container {
+  width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
