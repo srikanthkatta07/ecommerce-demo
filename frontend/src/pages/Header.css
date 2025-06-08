@@ -1,0 +1,168 @@
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  width: 100vw;
+  /* Ensure header spans the full browser width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  /* Prevent padding from affecting width */
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-button {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* Ensure the web app occupies the full browser height */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 70px;
+  /* Adjust for fixed header height */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #f0f0f0;
+  /* Light gray background */
+  border: 1px solid #ccc;
+  /* Add border */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 10px;
+  z-index: 9999;
+  width: 150px;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  padding: 5px 0;
+}
+
+.dropdown-menu button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: #d32f2f;
+}
+
+/* Ensure filter icon stays on top */
+.filter-icon {
+  position: relative;
+  top: 20px;
+  /* Moves the filter icon down */
+  left: 20px;
+  /* Moves the filter icon to the left */
+  z-index: 9999;
+  /* Ensures it stays on top of all other elements */
+}
+
+.profile-container:hover~.filter-icon {
+  top: 40px;
+  /* Moves the filter icon further down when profile is hovered */
+  left: 40px;
+  /* Moves the filter icon further left when profile is hovered */
+}
+
+/* Centered filter modal */
+.filter-modal {
+  position: fixed;
+  top: 50%;
+  /* Vertically center the modal */
+  left: 50%;
+  /* Horizontally center the modal */
+  transform: translate(-50%, -50%);
+  /* Ensure proper centering */
+  z-index: 9999;
+  /* Ensures it stays on top of all other elements */
+  background-color: #fff;
+  /* Add background color */
+  border: 1px solid #ccc;
+  /* Add border */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 20px;
+  /* Add padding */
+}
+
+/* Removed z-index for selected filters */
+.selected-filters {
+  position: relative;
+}

@@ -1,0 +1,178 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: start;
+  /* Ensure items align row-wise from left to right */
+  padding-top: 80px;
+  /* Adjust for fixed header height */
+}
+
+.product-card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.product-card button {
+  background-color: green;
+  /* Changed color to green */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: darkgreen;
+  /* Darker shade on hover */
+}
+
+.product-card input {
+  margin-right: 10px;
+  /* Add spacing between quantity input and Add to Cart button */
+}
+
+.filter-icon {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.filter-container {
+  position: relative;
+}
+
+select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Align with other inputs */
+}
+
+.filter-modal-content {
+  position: fixed;
+  top: 1px;
+  /* Moves the modal content slightly down */
+  right: 20px;
+  /* Position near the filter icon */
+  z-index: 1001;
+  /* Ensure it stays above other elements */
+  background-color: #fff;
+  /* Add background color */
+  border: 1px solid #ccc;
+  /* Add border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Add padding */
+  width: 300px;
+  /* Set width */
+}
+
+.filter-modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-modal-content li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-modal-content li:hover {
+  background-color: #f0f0f0;
+}
+
+.filter-modal-content button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.clear-filter-button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+}
+
+.clear-filter-button:hover {
+  background-color: #c82333;
+}
+
+/* Adjusted styling for filter labels */
+.selected-filters {
+  position: fixed;
+  top: 60px;
+  /* Adjust based on header height */
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  /* Optional: Add background color */
+  /* Ensure it stays above other elements */
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Optional: Add shadow for better visibility */
+}
+
+.filter-label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.remove-filter-button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 14px;
+}
